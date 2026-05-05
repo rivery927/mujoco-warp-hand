@@ -4,7 +4,7 @@ import mujoco
 import mujoco.viewer
 import numpy as np
 
-MODEL_PATH = "/home/rivery/duke_hand/models/hand_final.xml"
+MODEL_PATH =  "/home/rivery/duke_hand/models/hand_final.xml"
 
 
 def main():
