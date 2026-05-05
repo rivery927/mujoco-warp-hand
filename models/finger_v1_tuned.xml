@@ -1,0 +1,52 @@
+<mujoco model="finger_v1">
+  <!-- compiler:
+       angle="degree"     – 整个文件用度数（可读性，与 HL-3915 datasheet 对齐）
+       autolimits="true"  – 凡是设了 range 的 joint 自动限位
+       inertiafromgeom="true" – 由 geom 的 mass + 体积算 inertia tensor，避开 NaN 大坑 -->
+  <compiler angle="degree" autolimits="true" inertiafromgeom="true"/>
+
+  <option gravity="0 0 -9.81" timestep="0.002"/>
+
+  <!-- 公共默认值，避免在每个元素重复写 -->
+  <default>
+    <joint type="hinge" axis="0 1 0" damping="0.1"/>
+    <geom  type="capsule" rgba="0.7 0.75 0.85 1"/>
+    <!-- position actuator: kp 是位置增益, forcerange 来自 HL-3915 堵转扭矩 1.39 N·m -->
+    <position kp="100" forcerange="-1.39 1.39"/>
+  </default>
+
+  <worldbody>
+    <light pos="0.2 0 0.5" dir="0 0 -1"/>
+    <geom name="floor" type="plane" size="0.3 0.3 0.05" rgba="0.85 0.9 0.85 1"/>
+
+    <!-- palm: 固定的手掌基座, 不加 freejoint 即被钉死在世界系 -->
+    <body name="palm" pos="0 0 0.15">
+      <geom name="palm_geom" type="box" size="0.025 0.04 0.012"
+            rgba="0.4 0.4 0.45 1" mass="0.08"/>
+
+      <!-- 近节指骨 (proximal phalanx): 从 MCP 关节出发, 沿 +x 方向 -->
+      <body name="proximal" pos="0.025 0 0">
+        <joint name="mcp" range="-10 90"/>
+        <geom  name="proximal_geom"
+               fromto="0 0 0 0.05 0 0"
+               size="0.008"
+               mass="0.04"/>
+
+        <!-- 远节指骨 (distal phalanx): 从 PIP 关节出发, 继续沿 +x -->
+        <body name="distal" pos="0.05 0 0">
+          <joint name="pip" range="0 110"/>
+          <geom  name="distal_geom"
+                 fromto="0 0 0 0.035 0 0"
+                 size="0.007"
+                 mass="0.04"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- 控制信号是目标关节角度 (度), 与 joint range 单位一致 -->
+    <position name="mcp_act" joint="mcp" ctrlrange="-10 90"/>
+    <position name="pip_act" joint="pip" ctrlrange="0 110"/>
+  </actuator>
+</mujoco>
