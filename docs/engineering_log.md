@@ -39,3 +39,4 @@ Each entry is potential material for the final presentation.
 - Lesson: MuJoCo's `compiler angle="degree"` is a parsing-time convenience; the
   runtime is unit-agnostic and treats all signals in radians.
 
+Mon May  4 09:27:23 PM EDT 2026 - Project functionally complete. Email requirements 6/7 (#7 = in-person).
