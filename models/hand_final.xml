@@ -1,0 +1,62 @@
+<mujoco model="hand_final">
+  <compiler angle="degree" autolimits="true" inertiafromgeom="true"/>
+
+  <option gravity="0 0 -9.81" timestep="0.002"/>
+
+  <default>
+    <joint type="hinge" axis="0 1 0" damping="0.1"/>
+    <geom  type="capsule" rgba="0.7 0.75 0.85 1"/>
+    <position kp="100" forcerange="-1.39 1.39"/>
+  </default>
+
+  <worldbody>
+    <light pos="0.2 0 0.5" dir="0 0 -1"/>
+    <geom name="floor" type="plane" size="0.5 0.5 0.05" rgba="0.85 0.9 0.85 1"/>
+
+    <!-- palm: 100x30x24 mm, fixed in world frame.
+         3 fingers extend from +x edge, spaced 30mm apart along y. -->
+    <body name="palm" pos="0 0 0.15">
+      <geom name="palm_geom" type="box" size="0.05 0.05 0.012"
+            rgba="0.4 0.4 0.45 1" mass="0.12"/>
+
+      <!-- finger_0: y = +30mm -->
+      <body name="proximal_0" pos="0.05 0.030 0">
+        <joint name="mcp_0" range="-10 90"/>
+        <geom name="prox_0_geom" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="distal_0" pos="0.05 0 0">
+          <joint name="pip_0" range="0 110"/>
+          <geom name="dist_0_geom" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+
+      <!-- finger_1: y = 0 (center) -->
+      <body name="proximal_1" pos="0.05 0 0">
+        <joint name="mcp_1" range="-10 90"/>
+        <geom name="prox_1_geom" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="distal_1" pos="0.05 0 0">
+          <joint name="pip_1" range="0 110"/>
+          <geom name="dist_1_geom" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+
+      <!-- finger_2: y = -30mm -->
+      <body name="proximal_2" pos="0.05 -0.030 0">
+        <joint name="mcp_2" range="-10 90"/>
+        <geom name="prox_2_geom" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="distal_2" pos="0.05 0 0">
+          <joint name="pip_2" range="0 110"/>
+          <geom name="dist_2_geom" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <position name="mcp_0_act" joint="mcp_0" ctrlrange="-0.175 1.571"/>
+    <position name="pip_0_act" joint="pip_0" ctrlrange="0 1.920"/>
+    <position name="mcp_1_act" joint="mcp_1" ctrlrange="-0.175 1.571"/>
+    <position name="pip_1_act" joint="pip_1" ctrlrange="0 1.920"/>
+    <position name="mcp_2_act" joint="mcp_2" ctrlrange="-0.175 1.571"/>
+    <position name="pip_2_act" joint="pip_2" ctrlrange="0 1.920"/>
+  </actuator>
+</mujoco>
