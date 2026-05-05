@@ -1,0 +1,1742 @@
+<mujoco model="hand_grid_64">
+  <compiler angle="degree" autolimits="true" inertiafromgeom="true"/>
+  <option gravity="0 0 0" timestep="0.002"/>
+
+  <default>
+    <joint type="hinge" axis="0 1 0" damping="0.1"/>
+    <geom type="capsule" rgba="0.7 0.75 0.85 1"/>
+  </default>
+
+  <worldbody>
+    <light pos="0.0 0.0 3.0" dir="0 0 -1"/>
+    <geom name="floor" type="plane" size="2.0 2.0 0.05" rgba="0.85 0.9 0.85 1"/>
+    <body name="h0_palm" pos="-1.050 -1.050 0.15">
+      <geom name="h0_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h0_prox_0" pos="0.05 0.030 0">
+        <joint name="h0_mcp_0" range="-10 90"/>
+        <geom name="h0_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h0_dist_0" pos="0.05 0 0">
+          <joint name="h0_pip_0" range="0 110"/>
+          <geom name="h0_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h0_prox_1" pos="0.05 0 0">
+        <joint name="h0_mcp_1" range="-10 90"/>
+        <geom name="h0_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h0_dist_1" pos="0.05 0 0">
+          <joint name="h0_pip_1" range="0 110"/>
+          <geom name="h0_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h0_prox_2" pos="0.05 -0.030 0">
+        <joint name="h0_mcp_2" range="-10 90"/>
+        <geom name="h0_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h0_dist_2" pos="0.05 0 0">
+          <joint name="h0_pip_2" range="0 110"/>
+          <geom name="h0_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h1_palm" pos="-0.750 -1.050 0.15">
+      <geom name="h1_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h1_prox_0" pos="0.05 0.030 0">
+        <joint name="h1_mcp_0" range="-10 90"/>
+        <geom name="h1_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h1_dist_0" pos="0.05 0 0">
+          <joint name="h1_pip_0" range="0 110"/>
+          <geom name="h1_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h1_prox_1" pos="0.05 0 0">
+        <joint name="h1_mcp_1" range="-10 90"/>
+        <geom name="h1_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h1_dist_1" pos="0.05 0 0">
+          <joint name="h1_pip_1" range="0 110"/>
+          <geom name="h1_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h1_prox_2" pos="0.05 -0.030 0">
+        <joint name="h1_mcp_2" range="-10 90"/>
+        <geom name="h1_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h1_dist_2" pos="0.05 0 0">
+          <joint name="h1_pip_2" range="0 110"/>
+          <geom name="h1_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h2_palm" pos="-0.450 -1.050 0.15">
+      <geom name="h2_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h2_prox_0" pos="0.05 0.030 0">
+        <joint name="h2_mcp_0" range="-10 90"/>
+        <geom name="h2_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h2_dist_0" pos="0.05 0 0">
+          <joint name="h2_pip_0" range="0 110"/>
+          <geom name="h2_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h2_prox_1" pos="0.05 0 0">
+        <joint name="h2_mcp_1" range="-10 90"/>
+        <geom name="h2_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h2_dist_1" pos="0.05 0 0">
+          <joint name="h2_pip_1" range="0 110"/>
+          <geom name="h2_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h2_prox_2" pos="0.05 -0.030 0">
+        <joint name="h2_mcp_2" range="-10 90"/>
+        <geom name="h2_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h2_dist_2" pos="0.05 0 0">
+          <joint name="h2_pip_2" range="0 110"/>
+          <geom name="h2_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h3_palm" pos="-0.150 -1.050 0.15">
+      <geom name="h3_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h3_prox_0" pos="0.05 0.030 0">
+        <joint name="h3_mcp_0" range="-10 90"/>
+        <geom name="h3_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h3_dist_0" pos="0.05 0 0">
+          <joint name="h3_pip_0" range="0 110"/>
+          <geom name="h3_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h3_prox_1" pos="0.05 0 0">
+        <joint name="h3_mcp_1" range="-10 90"/>
+        <geom name="h3_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h3_dist_1" pos="0.05 0 0">
+          <joint name="h3_pip_1" range="0 110"/>
+          <geom name="h3_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h3_prox_2" pos="0.05 -0.030 0">
+        <joint name="h3_mcp_2" range="-10 90"/>
+        <geom name="h3_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h3_dist_2" pos="0.05 0 0">
+          <joint name="h3_pip_2" range="0 110"/>
+          <geom name="h3_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h4_palm" pos="0.150 -1.050 0.15">
+      <geom name="h4_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h4_prox_0" pos="0.05 0.030 0">
+        <joint name="h4_mcp_0" range="-10 90"/>
+        <geom name="h4_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h4_dist_0" pos="0.05 0 0">
+          <joint name="h4_pip_0" range="0 110"/>
+          <geom name="h4_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h4_prox_1" pos="0.05 0 0">
+        <joint name="h4_mcp_1" range="-10 90"/>
+        <geom name="h4_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h4_dist_1" pos="0.05 0 0">
+          <joint name="h4_pip_1" range="0 110"/>
+          <geom name="h4_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h4_prox_2" pos="0.05 -0.030 0">
+        <joint name="h4_mcp_2" range="-10 90"/>
+        <geom name="h4_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h4_dist_2" pos="0.05 0 0">
+          <joint name="h4_pip_2" range="0 110"/>
+          <geom name="h4_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h5_palm" pos="0.450 -1.050 0.15">
+      <geom name="h5_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h5_prox_0" pos="0.05 0.030 0">
+        <joint name="h5_mcp_0" range="-10 90"/>
+        <geom name="h5_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h5_dist_0" pos="0.05 0 0">
+          <joint name="h5_pip_0" range="0 110"/>
+          <geom name="h5_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h5_prox_1" pos="0.05 0 0">
+        <joint name="h5_mcp_1" range="-10 90"/>
+        <geom name="h5_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h5_dist_1" pos="0.05 0 0">
+          <joint name="h5_pip_1" range="0 110"/>
+          <geom name="h5_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h5_prox_2" pos="0.05 -0.030 0">
+        <joint name="h5_mcp_2" range="-10 90"/>
+        <geom name="h5_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h5_dist_2" pos="0.05 0 0">
+          <joint name="h5_pip_2" range="0 110"/>
+          <geom name="h5_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h6_palm" pos="0.750 -1.050 0.15">
+      <geom name="h6_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h6_prox_0" pos="0.05 0.030 0">
+        <joint name="h6_mcp_0" range="-10 90"/>
+        <geom name="h6_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h6_dist_0" pos="0.05 0 0">
+          <joint name="h6_pip_0" range="0 110"/>
+          <geom name="h6_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h6_prox_1" pos="0.05 0 0">
+        <joint name="h6_mcp_1" range="-10 90"/>
+        <geom name="h6_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h6_dist_1" pos="0.05 0 0">
+          <joint name="h6_pip_1" range="0 110"/>
+          <geom name="h6_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h6_prox_2" pos="0.05 -0.030 0">
+        <joint name="h6_mcp_2" range="-10 90"/>
+        <geom name="h6_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h6_dist_2" pos="0.05 0 0">
+          <joint name="h6_pip_2" range="0 110"/>
+          <geom name="h6_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h7_palm" pos="1.050 -1.050 0.15">
+      <geom name="h7_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h7_prox_0" pos="0.05 0.030 0">
+        <joint name="h7_mcp_0" range="-10 90"/>
+        <geom name="h7_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h7_dist_0" pos="0.05 0 0">
+          <joint name="h7_pip_0" range="0 110"/>
+          <geom name="h7_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h7_prox_1" pos="0.05 0 0">
+        <joint name="h7_mcp_1" range="-10 90"/>
+        <geom name="h7_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h7_dist_1" pos="0.05 0 0">
+          <joint name="h7_pip_1" range="0 110"/>
+          <geom name="h7_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h7_prox_2" pos="0.05 -0.030 0">
+        <joint name="h7_mcp_2" range="-10 90"/>
+        <geom name="h7_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h7_dist_2" pos="0.05 0 0">
+          <joint name="h7_pip_2" range="0 110"/>
+          <geom name="h7_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h8_palm" pos="-1.050 -0.750 0.15">
+      <geom name="h8_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h8_prox_0" pos="0.05 0.030 0">
+        <joint name="h8_mcp_0" range="-10 90"/>
+        <geom name="h8_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h8_dist_0" pos="0.05 0 0">
+          <joint name="h8_pip_0" range="0 110"/>
+          <geom name="h8_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h8_prox_1" pos="0.05 0 0">
+        <joint name="h8_mcp_1" range="-10 90"/>
+        <geom name="h8_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h8_dist_1" pos="0.05 0 0">
+          <joint name="h8_pip_1" range="0 110"/>
+          <geom name="h8_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h8_prox_2" pos="0.05 -0.030 0">
+        <joint name="h8_mcp_2" range="-10 90"/>
+        <geom name="h8_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h8_dist_2" pos="0.05 0 0">
+          <joint name="h8_pip_2" range="0 110"/>
+          <geom name="h8_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h9_palm" pos="-0.750 -0.750 0.15">
+      <geom name="h9_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h9_prox_0" pos="0.05 0.030 0">
+        <joint name="h9_mcp_0" range="-10 90"/>
+        <geom name="h9_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h9_dist_0" pos="0.05 0 0">
+          <joint name="h9_pip_0" range="0 110"/>
+          <geom name="h9_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h9_prox_1" pos="0.05 0 0">
+        <joint name="h9_mcp_1" range="-10 90"/>
+        <geom name="h9_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h9_dist_1" pos="0.05 0 0">
+          <joint name="h9_pip_1" range="0 110"/>
+          <geom name="h9_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h9_prox_2" pos="0.05 -0.030 0">
+        <joint name="h9_mcp_2" range="-10 90"/>
+        <geom name="h9_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h9_dist_2" pos="0.05 0 0">
+          <joint name="h9_pip_2" range="0 110"/>
+          <geom name="h9_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h10_palm" pos="-0.450 -0.750 0.15">
+      <geom name="h10_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h10_prox_0" pos="0.05 0.030 0">
+        <joint name="h10_mcp_0" range="-10 90"/>
+        <geom name="h10_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h10_dist_0" pos="0.05 0 0">
+          <joint name="h10_pip_0" range="0 110"/>
+          <geom name="h10_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h10_prox_1" pos="0.05 0 0">
+        <joint name="h10_mcp_1" range="-10 90"/>
+        <geom name="h10_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h10_dist_1" pos="0.05 0 0">
+          <joint name="h10_pip_1" range="0 110"/>
+          <geom name="h10_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h10_prox_2" pos="0.05 -0.030 0">
+        <joint name="h10_mcp_2" range="-10 90"/>
+        <geom name="h10_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h10_dist_2" pos="0.05 0 0">
+          <joint name="h10_pip_2" range="0 110"/>
+          <geom name="h10_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h11_palm" pos="-0.150 -0.750 0.15">
+      <geom name="h11_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h11_prox_0" pos="0.05 0.030 0">
+        <joint name="h11_mcp_0" range="-10 90"/>
+        <geom name="h11_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h11_dist_0" pos="0.05 0 0">
+          <joint name="h11_pip_0" range="0 110"/>
+          <geom name="h11_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h11_prox_1" pos="0.05 0 0">
+        <joint name="h11_mcp_1" range="-10 90"/>
+        <geom name="h11_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h11_dist_1" pos="0.05 0 0">
+          <joint name="h11_pip_1" range="0 110"/>
+          <geom name="h11_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h11_prox_2" pos="0.05 -0.030 0">
+        <joint name="h11_mcp_2" range="-10 90"/>
+        <geom name="h11_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h11_dist_2" pos="0.05 0 0">
+          <joint name="h11_pip_2" range="0 110"/>
+          <geom name="h11_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h12_palm" pos="0.150 -0.750 0.15">
+      <geom name="h12_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h12_prox_0" pos="0.05 0.030 0">
+        <joint name="h12_mcp_0" range="-10 90"/>
+        <geom name="h12_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h12_dist_0" pos="0.05 0 0">
+          <joint name="h12_pip_0" range="0 110"/>
+          <geom name="h12_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h12_prox_1" pos="0.05 0 0">
+        <joint name="h12_mcp_1" range="-10 90"/>
+        <geom name="h12_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h12_dist_1" pos="0.05 0 0">
+          <joint name="h12_pip_1" range="0 110"/>
+          <geom name="h12_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h12_prox_2" pos="0.05 -0.030 0">
+        <joint name="h12_mcp_2" range="-10 90"/>
+        <geom name="h12_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h12_dist_2" pos="0.05 0 0">
+          <joint name="h12_pip_2" range="0 110"/>
+          <geom name="h12_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h13_palm" pos="0.450 -0.750 0.15">
+      <geom name="h13_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h13_prox_0" pos="0.05 0.030 0">
+        <joint name="h13_mcp_0" range="-10 90"/>
+        <geom name="h13_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h13_dist_0" pos="0.05 0 0">
+          <joint name="h13_pip_0" range="0 110"/>
+          <geom name="h13_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h13_prox_1" pos="0.05 0 0">
+        <joint name="h13_mcp_1" range="-10 90"/>
+        <geom name="h13_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h13_dist_1" pos="0.05 0 0">
+          <joint name="h13_pip_1" range="0 110"/>
+          <geom name="h13_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h13_prox_2" pos="0.05 -0.030 0">
+        <joint name="h13_mcp_2" range="-10 90"/>
+        <geom name="h13_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h13_dist_2" pos="0.05 0 0">
+          <joint name="h13_pip_2" range="0 110"/>
+          <geom name="h13_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h14_palm" pos="0.750 -0.750 0.15">
+      <geom name="h14_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h14_prox_0" pos="0.05 0.030 0">
+        <joint name="h14_mcp_0" range="-10 90"/>
+        <geom name="h14_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h14_dist_0" pos="0.05 0 0">
+          <joint name="h14_pip_0" range="0 110"/>
+          <geom name="h14_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h14_prox_1" pos="0.05 0 0">
+        <joint name="h14_mcp_1" range="-10 90"/>
+        <geom name="h14_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h14_dist_1" pos="0.05 0 0">
+          <joint name="h14_pip_1" range="0 110"/>
+          <geom name="h14_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h14_prox_2" pos="0.05 -0.030 0">
+        <joint name="h14_mcp_2" range="-10 90"/>
+        <geom name="h14_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h14_dist_2" pos="0.05 0 0">
+          <joint name="h14_pip_2" range="0 110"/>
+          <geom name="h14_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h15_palm" pos="1.050 -0.750 0.15">
+      <geom name="h15_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h15_prox_0" pos="0.05 0.030 0">
+        <joint name="h15_mcp_0" range="-10 90"/>
+        <geom name="h15_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h15_dist_0" pos="0.05 0 0">
+          <joint name="h15_pip_0" range="0 110"/>
+          <geom name="h15_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h15_prox_1" pos="0.05 0 0">
+        <joint name="h15_mcp_1" range="-10 90"/>
+        <geom name="h15_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h15_dist_1" pos="0.05 0 0">
+          <joint name="h15_pip_1" range="0 110"/>
+          <geom name="h15_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h15_prox_2" pos="0.05 -0.030 0">
+        <joint name="h15_mcp_2" range="-10 90"/>
+        <geom name="h15_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h15_dist_2" pos="0.05 0 0">
+          <joint name="h15_pip_2" range="0 110"/>
+          <geom name="h15_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h16_palm" pos="-1.050 -0.450 0.15">
+      <geom name="h16_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h16_prox_0" pos="0.05 0.030 0">
+        <joint name="h16_mcp_0" range="-10 90"/>
+        <geom name="h16_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h16_dist_0" pos="0.05 0 0">
+          <joint name="h16_pip_0" range="0 110"/>
+          <geom name="h16_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h16_prox_1" pos="0.05 0 0">
+        <joint name="h16_mcp_1" range="-10 90"/>
+        <geom name="h16_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h16_dist_1" pos="0.05 0 0">
+          <joint name="h16_pip_1" range="0 110"/>
+          <geom name="h16_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h16_prox_2" pos="0.05 -0.030 0">
+        <joint name="h16_mcp_2" range="-10 90"/>
+        <geom name="h16_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h16_dist_2" pos="0.05 0 0">
+          <joint name="h16_pip_2" range="0 110"/>
+          <geom name="h16_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h17_palm" pos="-0.750 -0.450 0.15">
+      <geom name="h17_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h17_prox_0" pos="0.05 0.030 0">
+        <joint name="h17_mcp_0" range="-10 90"/>
+        <geom name="h17_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h17_dist_0" pos="0.05 0 0">
+          <joint name="h17_pip_0" range="0 110"/>
+          <geom name="h17_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h17_prox_1" pos="0.05 0 0">
+        <joint name="h17_mcp_1" range="-10 90"/>
+        <geom name="h17_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h17_dist_1" pos="0.05 0 0">
+          <joint name="h17_pip_1" range="0 110"/>
+          <geom name="h17_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h17_prox_2" pos="0.05 -0.030 0">
+        <joint name="h17_mcp_2" range="-10 90"/>
+        <geom name="h17_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h17_dist_2" pos="0.05 0 0">
+          <joint name="h17_pip_2" range="0 110"/>
+          <geom name="h17_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h18_palm" pos="-0.450 -0.450 0.15">
+      <geom name="h18_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h18_prox_0" pos="0.05 0.030 0">
+        <joint name="h18_mcp_0" range="-10 90"/>
+        <geom name="h18_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h18_dist_0" pos="0.05 0 0">
+          <joint name="h18_pip_0" range="0 110"/>
+          <geom name="h18_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h18_prox_1" pos="0.05 0 0">
+        <joint name="h18_mcp_1" range="-10 90"/>
+        <geom name="h18_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h18_dist_1" pos="0.05 0 0">
+          <joint name="h18_pip_1" range="0 110"/>
+          <geom name="h18_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h18_prox_2" pos="0.05 -0.030 0">
+        <joint name="h18_mcp_2" range="-10 90"/>
+        <geom name="h18_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h18_dist_2" pos="0.05 0 0">
+          <joint name="h18_pip_2" range="0 110"/>
+          <geom name="h18_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h19_palm" pos="-0.150 -0.450 0.15">
+      <geom name="h19_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h19_prox_0" pos="0.05 0.030 0">
+        <joint name="h19_mcp_0" range="-10 90"/>
+        <geom name="h19_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h19_dist_0" pos="0.05 0 0">
+          <joint name="h19_pip_0" range="0 110"/>
+          <geom name="h19_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h19_prox_1" pos="0.05 0 0">
+        <joint name="h19_mcp_1" range="-10 90"/>
+        <geom name="h19_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h19_dist_1" pos="0.05 0 0">
+          <joint name="h19_pip_1" range="0 110"/>
+          <geom name="h19_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h19_prox_2" pos="0.05 -0.030 0">
+        <joint name="h19_mcp_2" range="-10 90"/>
+        <geom name="h19_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h19_dist_2" pos="0.05 0 0">
+          <joint name="h19_pip_2" range="0 110"/>
+          <geom name="h19_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h20_palm" pos="0.150 -0.450 0.15">
+      <geom name="h20_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h20_prox_0" pos="0.05 0.030 0">
+        <joint name="h20_mcp_0" range="-10 90"/>
+        <geom name="h20_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h20_dist_0" pos="0.05 0 0">
+          <joint name="h20_pip_0" range="0 110"/>
+          <geom name="h20_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h20_prox_1" pos="0.05 0 0">
+        <joint name="h20_mcp_1" range="-10 90"/>
+        <geom name="h20_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h20_dist_1" pos="0.05 0 0">
+          <joint name="h20_pip_1" range="0 110"/>
+          <geom name="h20_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h20_prox_2" pos="0.05 -0.030 0">
+        <joint name="h20_mcp_2" range="-10 90"/>
+        <geom name="h20_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h20_dist_2" pos="0.05 0 0">
+          <joint name="h20_pip_2" range="0 110"/>
+          <geom name="h20_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h21_palm" pos="0.450 -0.450 0.15">
+      <geom name="h21_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h21_prox_0" pos="0.05 0.030 0">
+        <joint name="h21_mcp_0" range="-10 90"/>
+        <geom name="h21_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h21_dist_0" pos="0.05 0 0">
+          <joint name="h21_pip_0" range="0 110"/>
+          <geom name="h21_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h21_prox_1" pos="0.05 0 0">
+        <joint name="h21_mcp_1" range="-10 90"/>
+        <geom name="h21_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h21_dist_1" pos="0.05 0 0">
+          <joint name="h21_pip_1" range="0 110"/>
+          <geom name="h21_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h21_prox_2" pos="0.05 -0.030 0">
+        <joint name="h21_mcp_2" range="-10 90"/>
+        <geom name="h21_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h21_dist_2" pos="0.05 0 0">
+          <joint name="h21_pip_2" range="0 110"/>
+          <geom name="h21_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h22_palm" pos="0.750 -0.450 0.15">
+      <geom name="h22_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h22_prox_0" pos="0.05 0.030 0">
+        <joint name="h22_mcp_0" range="-10 90"/>
+        <geom name="h22_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h22_dist_0" pos="0.05 0 0">
+          <joint name="h22_pip_0" range="0 110"/>
+          <geom name="h22_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h22_prox_1" pos="0.05 0 0">
+        <joint name="h22_mcp_1" range="-10 90"/>
+        <geom name="h22_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h22_dist_1" pos="0.05 0 0">
+          <joint name="h22_pip_1" range="0 110"/>
+          <geom name="h22_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h22_prox_2" pos="0.05 -0.030 0">
+        <joint name="h22_mcp_2" range="-10 90"/>
+        <geom name="h22_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h22_dist_2" pos="0.05 0 0">
+          <joint name="h22_pip_2" range="0 110"/>
+          <geom name="h22_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h23_palm" pos="1.050 -0.450 0.15">
+      <geom name="h23_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h23_prox_0" pos="0.05 0.030 0">
+        <joint name="h23_mcp_0" range="-10 90"/>
+        <geom name="h23_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h23_dist_0" pos="0.05 0 0">
+          <joint name="h23_pip_0" range="0 110"/>
+          <geom name="h23_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h23_prox_1" pos="0.05 0 0">
+        <joint name="h23_mcp_1" range="-10 90"/>
+        <geom name="h23_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h23_dist_1" pos="0.05 0 0">
+          <joint name="h23_pip_1" range="0 110"/>
+          <geom name="h23_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h23_prox_2" pos="0.05 -0.030 0">
+        <joint name="h23_mcp_2" range="-10 90"/>
+        <geom name="h23_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h23_dist_2" pos="0.05 0 0">
+          <joint name="h23_pip_2" range="0 110"/>
+          <geom name="h23_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h24_palm" pos="-1.050 -0.150 0.15">
+      <geom name="h24_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h24_prox_0" pos="0.05 0.030 0">
+        <joint name="h24_mcp_0" range="-10 90"/>
+        <geom name="h24_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h24_dist_0" pos="0.05 0 0">
+          <joint name="h24_pip_0" range="0 110"/>
+          <geom name="h24_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h24_prox_1" pos="0.05 0 0">
+        <joint name="h24_mcp_1" range="-10 90"/>
+        <geom name="h24_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h24_dist_1" pos="0.05 0 0">
+          <joint name="h24_pip_1" range="0 110"/>
+          <geom name="h24_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h24_prox_2" pos="0.05 -0.030 0">
+        <joint name="h24_mcp_2" range="-10 90"/>
+        <geom name="h24_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h24_dist_2" pos="0.05 0 0">
+          <joint name="h24_pip_2" range="0 110"/>
+          <geom name="h24_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h25_palm" pos="-0.750 -0.150 0.15">
+      <geom name="h25_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h25_prox_0" pos="0.05 0.030 0">
+        <joint name="h25_mcp_0" range="-10 90"/>
+        <geom name="h25_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h25_dist_0" pos="0.05 0 0">
+          <joint name="h25_pip_0" range="0 110"/>
+          <geom name="h25_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h25_prox_1" pos="0.05 0 0">
+        <joint name="h25_mcp_1" range="-10 90"/>
+        <geom name="h25_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h25_dist_1" pos="0.05 0 0">
+          <joint name="h25_pip_1" range="0 110"/>
+          <geom name="h25_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h25_prox_2" pos="0.05 -0.030 0">
+        <joint name="h25_mcp_2" range="-10 90"/>
+        <geom name="h25_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h25_dist_2" pos="0.05 0 0">
+          <joint name="h25_pip_2" range="0 110"/>
+          <geom name="h25_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h26_palm" pos="-0.450 -0.150 0.15">
+      <geom name="h26_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h26_prox_0" pos="0.05 0.030 0">
+        <joint name="h26_mcp_0" range="-10 90"/>
+        <geom name="h26_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h26_dist_0" pos="0.05 0 0">
+          <joint name="h26_pip_0" range="0 110"/>
+          <geom name="h26_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h26_prox_1" pos="0.05 0 0">
+        <joint name="h26_mcp_1" range="-10 90"/>
+        <geom name="h26_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h26_dist_1" pos="0.05 0 0">
+          <joint name="h26_pip_1" range="0 110"/>
+          <geom name="h26_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h26_prox_2" pos="0.05 -0.030 0">
+        <joint name="h26_mcp_2" range="-10 90"/>
+        <geom name="h26_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h26_dist_2" pos="0.05 0 0">
+          <joint name="h26_pip_2" range="0 110"/>
+          <geom name="h26_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h27_palm" pos="-0.150 -0.150 0.15">
+      <geom name="h27_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h27_prox_0" pos="0.05 0.030 0">
+        <joint name="h27_mcp_0" range="-10 90"/>
+        <geom name="h27_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h27_dist_0" pos="0.05 0 0">
+          <joint name="h27_pip_0" range="0 110"/>
+          <geom name="h27_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h27_prox_1" pos="0.05 0 0">
+        <joint name="h27_mcp_1" range="-10 90"/>
+        <geom name="h27_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h27_dist_1" pos="0.05 0 0">
+          <joint name="h27_pip_1" range="0 110"/>
+          <geom name="h27_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h27_prox_2" pos="0.05 -0.030 0">
+        <joint name="h27_mcp_2" range="-10 90"/>
+        <geom name="h27_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h27_dist_2" pos="0.05 0 0">
+          <joint name="h27_pip_2" range="0 110"/>
+          <geom name="h27_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h28_palm" pos="0.150 -0.150 0.15">
+      <geom name="h28_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h28_prox_0" pos="0.05 0.030 0">
+        <joint name="h28_mcp_0" range="-10 90"/>
+        <geom name="h28_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h28_dist_0" pos="0.05 0 0">
+          <joint name="h28_pip_0" range="0 110"/>
+          <geom name="h28_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h28_prox_1" pos="0.05 0 0">
+        <joint name="h28_mcp_1" range="-10 90"/>
+        <geom name="h28_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h28_dist_1" pos="0.05 0 0">
+          <joint name="h28_pip_1" range="0 110"/>
+          <geom name="h28_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h28_prox_2" pos="0.05 -0.030 0">
+        <joint name="h28_mcp_2" range="-10 90"/>
+        <geom name="h28_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h28_dist_2" pos="0.05 0 0">
+          <joint name="h28_pip_2" range="0 110"/>
+          <geom name="h28_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h29_palm" pos="0.450 -0.150 0.15">
+      <geom name="h29_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h29_prox_0" pos="0.05 0.030 0">
+        <joint name="h29_mcp_0" range="-10 90"/>
+        <geom name="h29_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h29_dist_0" pos="0.05 0 0">
+          <joint name="h29_pip_0" range="0 110"/>
+          <geom name="h29_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h29_prox_1" pos="0.05 0 0">
+        <joint name="h29_mcp_1" range="-10 90"/>
+        <geom name="h29_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h29_dist_1" pos="0.05 0 0">
+          <joint name="h29_pip_1" range="0 110"/>
+          <geom name="h29_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h29_prox_2" pos="0.05 -0.030 0">
+        <joint name="h29_mcp_2" range="-10 90"/>
+        <geom name="h29_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h29_dist_2" pos="0.05 0 0">
+          <joint name="h29_pip_2" range="0 110"/>
+          <geom name="h29_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h30_palm" pos="0.750 -0.150 0.15">
+      <geom name="h30_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h30_prox_0" pos="0.05 0.030 0">
+        <joint name="h30_mcp_0" range="-10 90"/>
+        <geom name="h30_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h30_dist_0" pos="0.05 0 0">
+          <joint name="h30_pip_0" range="0 110"/>
+          <geom name="h30_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h30_prox_1" pos="0.05 0 0">
+        <joint name="h30_mcp_1" range="-10 90"/>
+        <geom name="h30_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h30_dist_1" pos="0.05 0 0">
+          <joint name="h30_pip_1" range="0 110"/>
+          <geom name="h30_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h30_prox_2" pos="0.05 -0.030 0">
+        <joint name="h30_mcp_2" range="-10 90"/>
+        <geom name="h30_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h30_dist_2" pos="0.05 0 0">
+          <joint name="h30_pip_2" range="0 110"/>
+          <geom name="h30_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h31_palm" pos="1.050 -0.150 0.15">
+      <geom name="h31_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h31_prox_0" pos="0.05 0.030 0">
+        <joint name="h31_mcp_0" range="-10 90"/>
+        <geom name="h31_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h31_dist_0" pos="0.05 0 0">
+          <joint name="h31_pip_0" range="0 110"/>
+          <geom name="h31_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h31_prox_1" pos="0.05 0 0">
+        <joint name="h31_mcp_1" range="-10 90"/>
+        <geom name="h31_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h31_dist_1" pos="0.05 0 0">
+          <joint name="h31_pip_1" range="0 110"/>
+          <geom name="h31_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h31_prox_2" pos="0.05 -0.030 0">
+        <joint name="h31_mcp_2" range="-10 90"/>
+        <geom name="h31_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h31_dist_2" pos="0.05 0 0">
+          <joint name="h31_pip_2" range="0 110"/>
+          <geom name="h31_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h32_palm" pos="-1.050 0.150 0.15">
+      <geom name="h32_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h32_prox_0" pos="0.05 0.030 0">
+        <joint name="h32_mcp_0" range="-10 90"/>
+        <geom name="h32_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h32_dist_0" pos="0.05 0 0">
+          <joint name="h32_pip_0" range="0 110"/>
+          <geom name="h32_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h32_prox_1" pos="0.05 0 0">
+        <joint name="h32_mcp_1" range="-10 90"/>
+        <geom name="h32_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h32_dist_1" pos="0.05 0 0">
+          <joint name="h32_pip_1" range="0 110"/>
+          <geom name="h32_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h32_prox_2" pos="0.05 -0.030 0">
+        <joint name="h32_mcp_2" range="-10 90"/>
+        <geom name="h32_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h32_dist_2" pos="0.05 0 0">
+          <joint name="h32_pip_2" range="0 110"/>
+          <geom name="h32_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h33_palm" pos="-0.750 0.150 0.15">
+      <geom name="h33_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h33_prox_0" pos="0.05 0.030 0">
+        <joint name="h33_mcp_0" range="-10 90"/>
+        <geom name="h33_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h33_dist_0" pos="0.05 0 0">
+          <joint name="h33_pip_0" range="0 110"/>
+          <geom name="h33_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h33_prox_1" pos="0.05 0 0">
+        <joint name="h33_mcp_1" range="-10 90"/>
+        <geom name="h33_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h33_dist_1" pos="0.05 0 0">
+          <joint name="h33_pip_1" range="0 110"/>
+          <geom name="h33_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h33_prox_2" pos="0.05 -0.030 0">
+        <joint name="h33_mcp_2" range="-10 90"/>
+        <geom name="h33_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h33_dist_2" pos="0.05 0 0">
+          <joint name="h33_pip_2" range="0 110"/>
+          <geom name="h33_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h34_palm" pos="-0.450 0.150 0.15">
+      <geom name="h34_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h34_prox_0" pos="0.05 0.030 0">
+        <joint name="h34_mcp_0" range="-10 90"/>
+        <geom name="h34_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h34_dist_0" pos="0.05 0 0">
+          <joint name="h34_pip_0" range="0 110"/>
+          <geom name="h34_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h34_prox_1" pos="0.05 0 0">
+        <joint name="h34_mcp_1" range="-10 90"/>
+        <geom name="h34_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h34_dist_1" pos="0.05 0 0">
+          <joint name="h34_pip_1" range="0 110"/>
+          <geom name="h34_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h34_prox_2" pos="0.05 -0.030 0">
+        <joint name="h34_mcp_2" range="-10 90"/>
+        <geom name="h34_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h34_dist_2" pos="0.05 0 0">
+          <joint name="h34_pip_2" range="0 110"/>
+          <geom name="h34_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h35_palm" pos="-0.150 0.150 0.15">
+      <geom name="h35_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h35_prox_0" pos="0.05 0.030 0">
+        <joint name="h35_mcp_0" range="-10 90"/>
+        <geom name="h35_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h35_dist_0" pos="0.05 0 0">
+          <joint name="h35_pip_0" range="0 110"/>
+          <geom name="h35_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h35_prox_1" pos="0.05 0 0">
+        <joint name="h35_mcp_1" range="-10 90"/>
+        <geom name="h35_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h35_dist_1" pos="0.05 0 0">
+          <joint name="h35_pip_1" range="0 110"/>
+          <geom name="h35_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h35_prox_2" pos="0.05 -0.030 0">
+        <joint name="h35_mcp_2" range="-10 90"/>
+        <geom name="h35_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h35_dist_2" pos="0.05 0 0">
+          <joint name="h35_pip_2" range="0 110"/>
+          <geom name="h35_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h36_palm" pos="0.150 0.150 0.15">
+      <geom name="h36_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h36_prox_0" pos="0.05 0.030 0">
+        <joint name="h36_mcp_0" range="-10 90"/>
+        <geom name="h36_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h36_dist_0" pos="0.05 0 0">
+          <joint name="h36_pip_0" range="0 110"/>
+          <geom name="h36_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h36_prox_1" pos="0.05 0 0">
+        <joint name="h36_mcp_1" range="-10 90"/>
+        <geom name="h36_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h36_dist_1" pos="0.05 0 0">
+          <joint name="h36_pip_1" range="0 110"/>
+          <geom name="h36_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h36_prox_2" pos="0.05 -0.030 0">
+        <joint name="h36_mcp_2" range="-10 90"/>
+        <geom name="h36_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h36_dist_2" pos="0.05 0 0">
+          <joint name="h36_pip_2" range="0 110"/>
+          <geom name="h36_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h37_palm" pos="0.450 0.150 0.15">
+      <geom name="h37_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h37_prox_0" pos="0.05 0.030 0">
+        <joint name="h37_mcp_0" range="-10 90"/>
+        <geom name="h37_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h37_dist_0" pos="0.05 0 0">
+          <joint name="h37_pip_0" range="0 110"/>
+          <geom name="h37_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h37_prox_1" pos="0.05 0 0">
+        <joint name="h37_mcp_1" range="-10 90"/>
+        <geom name="h37_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h37_dist_1" pos="0.05 0 0">
+          <joint name="h37_pip_1" range="0 110"/>
+          <geom name="h37_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h37_prox_2" pos="0.05 -0.030 0">
+        <joint name="h37_mcp_2" range="-10 90"/>
+        <geom name="h37_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h37_dist_2" pos="0.05 0 0">
+          <joint name="h37_pip_2" range="0 110"/>
+          <geom name="h37_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h38_palm" pos="0.750 0.150 0.15">
+      <geom name="h38_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h38_prox_0" pos="0.05 0.030 0">
+        <joint name="h38_mcp_0" range="-10 90"/>
+        <geom name="h38_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h38_dist_0" pos="0.05 0 0">
+          <joint name="h38_pip_0" range="0 110"/>
+          <geom name="h38_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h38_prox_1" pos="0.05 0 0">
+        <joint name="h38_mcp_1" range="-10 90"/>
+        <geom name="h38_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h38_dist_1" pos="0.05 0 0">
+          <joint name="h38_pip_1" range="0 110"/>
+          <geom name="h38_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h38_prox_2" pos="0.05 -0.030 0">
+        <joint name="h38_mcp_2" range="-10 90"/>
+        <geom name="h38_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h38_dist_2" pos="0.05 0 0">
+          <joint name="h38_pip_2" range="0 110"/>
+          <geom name="h38_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h39_palm" pos="1.050 0.150 0.15">
+      <geom name="h39_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h39_prox_0" pos="0.05 0.030 0">
+        <joint name="h39_mcp_0" range="-10 90"/>
+        <geom name="h39_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h39_dist_0" pos="0.05 0 0">
+          <joint name="h39_pip_0" range="0 110"/>
+          <geom name="h39_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h39_prox_1" pos="0.05 0 0">
+        <joint name="h39_mcp_1" range="-10 90"/>
+        <geom name="h39_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h39_dist_1" pos="0.05 0 0">
+          <joint name="h39_pip_1" range="0 110"/>
+          <geom name="h39_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h39_prox_2" pos="0.05 -0.030 0">
+        <joint name="h39_mcp_2" range="-10 90"/>
+        <geom name="h39_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h39_dist_2" pos="0.05 0 0">
+          <joint name="h39_pip_2" range="0 110"/>
+          <geom name="h39_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h40_palm" pos="-1.050 0.450 0.15">
+      <geom name="h40_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h40_prox_0" pos="0.05 0.030 0">
+        <joint name="h40_mcp_0" range="-10 90"/>
+        <geom name="h40_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h40_dist_0" pos="0.05 0 0">
+          <joint name="h40_pip_0" range="0 110"/>
+          <geom name="h40_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h40_prox_1" pos="0.05 0 0">
+        <joint name="h40_mcp_1" range="-10 90"/>
+        <geom name="h40_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h40_dist_1" pos="0.05 0 0">
+          <joint name="h40_pip_1" range="0 110"/>
+          <geom name="h40_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h40_prox_2" pos="0.05 -0.030 0">
+        <joint name="h40_mcp_2" range="-10 90"/>
+        <geom name="h40_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h40_dist_2" pos="0.05 0 0">
+          <joint name="h40_pip_2" range="0 110"/>
+          <geom name="h40_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h41_palm" pos="-0.750 0.450 0.15">
+      <geom name="h41_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h41_prox_0" pos="0.05 0.030 0">
+        <joint name="h41_mcp_0" range="-10 90"/>
+        <geom name="h41_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h41_dist_0" pos="0.05 0 0">
+          <joint name="h41_pip_0" range="0 110"/>
+          <geom name="h41_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h41_prox_1" pos="0.05 0 0">
+        <joint name="h41_mcp_1" range="-10 90"/>
+        <geom name="h41_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h41_dist_1" pos="0.05 0 0">
+          <joint name="h41_pip_1" range="0 110"/>
+          <geom name="h41_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h41_prox_2" pos="0.05 -0.030 0">
+        <joint name="h41_mcp_2" range="-10 90"/>
+        <geom name="h41_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h41_dist_2" pos="0.05 0 0">
+          <joint name="h41_pip_2" range="0 110"/>
+          <geom name="h41_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h42_palm" pos="-0.450 0.450 0.15">
+      <geom name="h42_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h42_prox_0" pos="0.05 0.030 0">
+        <joint name="h42_mcp_0" range="-10 90"/>
+        <geom name="h42_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h42_dist_0" pos="0.05 0 0">
+          <joint name="h42_pip_0" range="0 110"/>
+          <geom name="h42_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h42_prox_1" pos="0.05 0 0">
+        <joint name="h42_mcp_1" range="-10 90"/>
+        <geom name="h42_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h42_dist_1" pos="0.05 0 0">
+          <joint name="h42_pip_1" range="0 110"/>
+          <geom name="h42_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h42_prox_2" pos="0.05 -0.030 0">
+        <joint name="h42_mcp_2" range="-10 90"/>
+        <geom name="h42_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h42_dist_2" pos="0.05 0 0">
+          <joint name="h42_pip_2" range="0 110"/>
+          <geom name="h42_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h43_palm" pos="-0.150 0.450 0.15">
+      <geom name="h43_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h43_prox_0" pos="0.05 0.030 0">
+        <joint name="h43_mcp_0" range="-10 90"/>
+        <geom name="h43_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h43_dist_0" pos="0.05 0 0">
+          <joint name="h43_pip_0" range="0 110"/>
+          <geom name="h43_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h43_prox_1" pos="0.05 0 0">
+        <joint name="h43_mcp_1" range="-10 90"/>
+        <geom name="h43_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h43_dist_1" pos="0.05 0 0">
+          <joint name="h43_pip_1" range="0 110"/>
+          <geom name="h43_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h43_prox_2" pos="0.05 -0.030 0">
+        <joint name="h43_mcp_2" range="-10 90"/>
+        <geom name="h43_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h43_dist_2" pos="0.05 0 0">
+          <joint name="h43_pip_2" range="0 110"/>
+          <geom name="h43_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h44_palm" pos="0.150 0.450 0.15">
+      <geom name="h44_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h44_prox_0" pos="0.05 0.030 0">
+        <joint name="h44_mcp_0" range="-10 90"/>
+        <geom name="h44_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h44_dist_0" pos="0.05 0 0">
+          <joint name="h44_pip_0" range="0 110"/>
+          <geom name="h44_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h44_prox_1" pos="0.05 0 0">
+        <joint name="h44_mcp_1" range="-10 90"/>
+        <geom name="h44_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h44_dist_1" pos="0.05 0 0">
+          <joint name="h44_pip_1" range="0 110"/>
+          <geom name="h44_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h44_prox_2" pos="0.05 -0.030 0">
+        <joint name="h44_mcp_2" range="-10 90"/>
+        <geom name="h44_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h44_dist_2" pos="0.05 0 0">
+          <joint name="h44_pip_2" range="0 110"/>
+          <geom name="h44_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h45_palm" pos="0.450 0.450 0.15">
+      <geom name="h45_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h45_prox_0" pos="0.05 0.030 0">
+        <joint name="h45_mcp_0" range="-10 90"/>
+        <geom name="h45_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h45_dist_0" pos="0.05 0 0">
+          <joint name="h45_pip_0" range="0 110"/>
+          <geom name="h45_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h45_prox_1" pos="0.05 0 0">
+        <joint name="h45_mcp_1" range="-10 90"/>
+        <geom name="h45_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h45_dist_1" pos="0.05 0 0">
+          <joint name="h45_pip_1" range="0 110"/>
+          <geom name="h45_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h45_prox_2" pos="0.05 -0.030 0">
+        <joint name="h45_mcp_2" range="-10 90"/>
+        <geom name="h45_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h45_dist_2" pos="0.05 0 0">
+          <joint name="h45_pip_2" range="0 110"/>
+          <geom name="h45_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h46_palm" pos="0.750 0.450 0.15">
+      <geom name="h46_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h46_prox_0" pos="0.05 0.030 0">
+        <joint name="h46_mcp_0" range="-10 90"/>
+        <geom name="h46_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h46_dist_0" pos="0.05 0 0">
+          <joint name="h46_pip_0" range="0 110"/>
+          <geom name="h46_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h46_prox_1" pos="0.05 0 0">
+        <joint name="h46_mcp_1" range="-10 90"/>
+        <geom name="h46_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h46_dist_1" pos="0.05 0 0">
+          <joint name="h46_pip_1" range="0 110"/>
+          <geom name="h46_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h46_prox_2" pos="0.05 -0.030 0">
+        <joint name="h46_mcp_2" range="-10 90"/>
+        <geom name="h46_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h46_dist_2" pos="0.05 0 0">
+          <joint name="h46_pip_2" range="0 110"/>
+          <geom name="h46_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h47_palm" pos="1.050 0.450 0.15">
+      <geom name="h47_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h47_prox_0" pos="0.05 0.030 0">
+        <joint name="h47_mcp_0" range="-10 90"/>
+        <geom name="h47_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h47_dist_0" pos="0.05 0 0">
+          <joint name="h47_pip_0" range="0 110"/>
+          <geom name="h47_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h47_prox_1" pos="0.05 0 0">
+        <joint name="h47_mcp_1" range="-10 90"/>
+        <geom name="h47_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h47_dist_1" pos="0.05 0 0">
+          <joint name="h47_pip_1" range="0 110"/>
+          <geom name="h47_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h47_prox_2" pos="0.05 -0.030 0">
+        <joint name="h47_mcp_2" range="-10 90"/>
+        <geom name="h47_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h47_dist_2" pos="0.05 0 0">
+          <joint name="h47_pip_2" range="0 110"/>
+          <geom name="h47_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h48_palm" pos="-1.050 0.750 0.15">
+      <geom name="h48_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h48_prox_0" pos="0.05 0.030 0">
+        <joint name="h48_mcp_0" range="-10 90"/>
+        <geom name="h48_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h48_dist_0" pos="0.05 0 0">
+          <joint name="h48_pip_0" range="0 110"/>
+          <geom name="h48_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h48_prox_1" pos="0.05 0 0">
+        <joint name="h48_mcp_1" range="-10 90"/>
+        <geom name="h48_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h48_dist_1" pos="0.05 0 0">
+          <joint name="h48_pip_1" range="0 110"/>
+          <geom name="h48_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h48_prox_2" pos="0.05 -0.030 0">
+        <joint name="h48_mcp_2" range="-10 90"/>
+        <geom name="h48_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h48_dist_2" pos="0.05 0 0">
+          <joint name="h48_pip_2" range="0 110"/>
+          <geom name="h48_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h49_palm" pos="-0.750 0.750 0.15">
+      <geom name="h49_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h49_prox_0" pos="0.05 0.030 0">
+        <joint name="h49_mcp_0" range="-10 90"/>
+        <geom name="h49_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h49_dist_0" pos="0.05 0 0">
+          <joint name="h49_pip_0" range="0 110"/>
+          <geom name="h49_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h49_prox_1" pos="0.05 0 0">
+        <joint name="h49_mcp_1" range="-10 90"/>
+        <geom name="h49_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h49_dist_1" pos="0.05 0 0">
+          <joint name="h49_pip_1" range="0 110"/>
+          <geom name="h49_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h49_prox_2" pos="0.05 -0.030 0">
+        <joint name="h49_mcp_2" range="-10 90"/>
+        <geom name="h49_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h49_dist_2" pos="0.05 0 0">
+          <joint name="h49_pip_2" range="0 110"/>
+          <geom name="h49_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h50_palm" pos="-0.450 0.750 0.15">
+      <geom name="h50_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h50_prox_0" pos="0.05 0.030 0">
+        <joint name="h50_mcp_0" range="-10 90"/>
+        <geom name="h50_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h50_dist_0" pos="0.05 0 0">
+          <joint name="h50_pip_0" range="0 110"/>
+          <geom name="h50_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h50_prox_1" pos="0.05 0 0">
+        <joint name="h50_mcp_1" range="-10 90"/>
+        <geom name="h50_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h50_dist_1" pos="0.05 0 0">
+          <joint name="h50_pip_1" range="0 110"/>
+          <geom name="h50_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h50_prox_2" pos="0.05 -0.030 0">
+        <joint name="h50_mcp_2" range="-10 90"/>
+        <geom name="h50_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h50_dist_2" pos="0.05 0 0">
+          <joint name="h50_pip_2" range="0 110"/>
+          <geom name="h50_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h51_palm" pos="-0.150 0.750 0.15">
+      <geom name="h51_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h51_prox_0" pos="0.05 0.030 0">
+        <joint name="h51_mcp_0" range="-10 90"/>
+        <geom name="h51_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h51_dist_0" pos="0.05 0 0">
+          <joint name="h51_pip_0" range="0 110"/>
+          <geom name="h51_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h51_prox_1" pos="0.05 0 0">
+        <joint name="h51_mcp_1" range="-10 90"/>
+        <geom name="h51_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h51_dist_1" pos="0.05 0 0">
+          <joint name="h51_pip_1" range="0 110"/>
+          <geom name="h51_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h51_prox_2" pos="0.05 -0.030 0">
+        <joint name="h51_mcp_2" range="-10 90"/>
+        <geom name="h51_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h51_dist_2" pos="0.05 0 0">
+          <joint name="h51_pip_2" range="0 110"/>
+          <geom name="h51_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h52_palm" pos="0.150 0.750 0.15">
+      <geom name="h52_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h52_prox_0" pos="0.05 0.030 0">
+        <joint name="h52_mcp_0" range="-10 90"/>
+        <geom name="h52_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h52_dist_0" pos="0.05 0 0">
+          <joint name="h52_pip_0" range="0 110"/>
+          <geom name="h52_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h52_prox_1" pos="0.05 0 0">
+        <joint name="h52_mcp_1" range="-10 90"/>
+        <geom name="h52_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h52_dist_1" pos="0.05 0 0">
+          <joint name="h52_pip_1" range="0 110"/>
+          <geom name="h52_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h52_prox_2" pos="0.05 -0.030 0">
+        <joint name="h52_mcp_2" range="-10 90"/>
+        <geom name="h52_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h52_dist_2" pos="0.05 0 0">
+          <joint name="h52_pip_2" range="0 110"/>
+          <geom name="h52_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h53_palm" pos="0.450 0.750 0.15">
+      <geom name="h53_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h53_prox_0" pos="0.05 0.030 0">
+        <joint name="h53_mcp_0" range="-10 90"/>
+        <geom name="h53_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h53_dist_0" pos="0.05 0 0">
+          <joint name="h53_pip_0" range="0 110"/>
+          <geom name="h53_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h53_prox_1" pos="0.05 0 0">
+        <joint name="h53_mcp_1" range="-10 90"/>
+        <geom name="h53_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h53_dist_1" pos="0.05 0 0">
+          <joint name="h53_pip_1" range="0 110"/>
+          <geom name="h53_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h53_prox_2" pos="0.05 -0.030 0">
+        <joint name="h53_mcp_2" range="-10 90"/>
+        <geom name="h53_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h53_dist_2" pos="0.05 0 0">
+          <joint name="h53_pip_2" range="0 110"/>
+          <geom name="h53_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h54_palm" pos="0.750 0.750 0.15">
+      <geom name="h54_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h54_prox_0" pos="0.05 0.030 0">
+        <joint name="h54_mcp_0" range="-10 90"/>
+        <geom name="h54_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h54_dist_0" pos="0.05 0 0">
+          <joint name="h54_pip_0" range="0 110"/>
+          <geom name="h54_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h54_prox_1" pos="0.05 0 0">
+        <joint name="h54_mcp_1" range="-10 90"/>
+        <geom name="h54_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h54_dist_1" pos="0.05 0 0">
+          <joint name="h54_pip_1" range="0 110"/>
+          <geom name="h54_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h54_prox_2" pos="0.05 -0.030 0">
+        <joint name="h54_mcp_2" range="-10 90"/>
+        <geom name="h54_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h54_dist_2" pos="0.05 0 0">
+          <joint name="h54_pip_2" range="0 110"/>
+          <geom name="h54_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h55_palm" pos="1.050 0.750 0.15">
+      <geom name="h55_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h55_prox_0" pos="0.05 0.030 0">
+        <joint name="h55_mcp_0" range="-10 90"/>
+        <geom name="h55_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h55_dist_0" pos="0.05 0 0">
+          <joint name="h55_pip_0" range="0 110"/>
+          <geom name="h55_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h55_prox_1" pos="0.05 0 0">
+        <joint name="h55_mcp_1" range="-10 90"/>
+        <geom name="h55_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h55_dist_1" pos="0.05 0 0">
+          <joint name="h55_pip_1" range="0 110"/>
+          <geom name="h55_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h55_prox_2" pos="0.05 -0.030 0">
+        <joint name="h55_mcp_2" range="-10 90"/>
+        <geom name="h55_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h55_dist_2" pos="0.05 0 0">
+          <joint name="h55_pip_2" range="0 110"/>
+          <geom name="h55_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h56_palm" pos="-1.050 1.050 0.15">
+      <geom name="h56_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h56_prox_0" pos="0.05 0.030 0">
+        <joint name="h56_mcp_0" range="-10 90"/>
+        <geom name="h56_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h56_dist_0" pos="0.05 0 0">
+          <joint name="h56_pip_0" range="0 110"/>
+          <geom name="h56_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h56_prox_1" pos="0.05 0 0">
+        <joint name="h56_mcp_1" range="-10 90"/>
+        <geom name="h56_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h56_dist_1" pos="0.05 0 0">
+          <joint name="h56_pip_1" range="0 110"/>
+          <geom name="h56_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h56_prox_2" pos="0.05 -0.030 0">
+        <joint name="h56_mcp_2" range="-10 90"/>
+        <geom name="h56_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h56_dist_2" pos="0.05 0 0">
+          <joint name="h56_pip_2" range="0 110"/>
+          <geom name="h56_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h57_palm" pos="-0.750 1.050 0.15">
+      <geom name="h57_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h57_prox_0" pos="0.05 0.030 0">
+        <joint name="h57_mcp_0" range="-10 90"/>
+        <geom name="h57_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h57_dist_0" pos="0.05 0 0">
+          <joint name="h57_pip_0" range="0 110"/>
+          <geom name="h57_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h57_prox_1" pos="0.05 0 0">
+        <joint name="h57_mcp_1" range="-10 90"/>
+        <geom name="h57_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h57_dist_1" pos="0.05 0 0">
+          <joint name="h57_pip_1" range="0 110"/>
+          <geom name="h57_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h57_prox_2" pos="0.05 -0.030 0">
+        <joint name="h57_mcp_2" range="-10 90"/>
+        <geom name="h57_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h57_dist_2" pos="0.05 0 0">
+          <joint name="h57_pip_2" range="0 110"/>
+          <geom name="h57_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h58_palm" pos="-0.450 1.050 0.15">
+      <geom name="h58_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h58_prox_0" pos="0.05 0.030 0">
+        <joint name="h58_mcp_0" range="-10 90"/>
+        <geom name="h58_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h58_dist_0" pos="0.05 0 0">
+          <joint name="h58_pip_0" range="0 110"/>
+          <geom name="h58_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h58_prox_1" pos="0.05 0 0">
+        <joint name="h58_mcp_1" range="-10 90"/>
+        <geom name="h58_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h58_dist_1" pos="0.05 0 0">
+          <joint name="h58_pip_1" range="0 110"/>
+          <geom name="h58_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h58_prox_2" pos="0.05 -0.030 0">
+        <joint name="h58_mcp_2" range="-10 90"/>
+        <geom name="h58_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h58_dist_2" pos="0.05 0 0">
+          <joint name="h58_pip_2" range="0 110"/>
+          <geom name="h58_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h59_palm" pos="-0.150 1.050 0.15">
+      <geom name="h59_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h59_prox_0" pos="0.05 0.030 0">
+        <joint name="h59_mcp_0" range="-10 90"/>
+        <geom name="h59_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h59_dist_0" pos="0.05 0 0">
+          <joint name="h59_pip_0" range="0 110"/>
+          <geom name="h59_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h59_prox_1" pos="0.05 0 0">
+        <joint name="h59_mcp_1" range="-10 90"/>
+        <geom name="h59_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h59_dist_1" pos="0.05 0 0">
+          <joint name="h59_pip_1" range="0 110"/>
+          <geom name="h59_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h59_prox_2" pos="0.05 -0.030 0">
+        <joint name="h59_mcp_2" range="-10 90"/>
+        <geom name="h59_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h59_dist_2" pos="0.05 0 0">
+          <joint name="h59_pip_2" range="0 110"/>
+          <geom name="h59_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h60_palm" pos="0.150 1.050 0.15">
+      <geom name="h60_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h60_prox_0" pos="0.05 0.030 0">
+        <joint name="h60_mcp_0" range="-10 90"/>
+        <geom name="h60_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h60_dist_0" pos="0.05 0 0">
+          <joint name="h60_pip_0" range="0 110"/>
+          <geom name="h60_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h60_prox_1" pos="0.05 0 0">
+        <joint name="h60_mcp_1" range="-10 90"/>
+        <geom name="h60_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h60_dist_1" pos="0.05 0 0">
+          <joint name="h60_pip_1" range="0 110"/>
+          <geom name="h60_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h60_prox_2" pos="0.05 -0.030 0">
+        <joint name="h60_mcp_2" range="-10 90"/>
+        <geom name="h60_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h60_dist_2" pos="0.05 0 0">
+          <joint name="h60_pip_2" range="0 110"/>
+          <geom name="h60_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h61_palm" pos="0.450 1.050 0.15">
+      <geom name="h61_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h61_prox_0" pos="0.05 0.030 0">
+        <joint name="h61_mcp_0" range="-10 90"/>
+        <geom name="h61_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h61_dist_0" pos="0.05 0 0">
+          <joint name="h61_pip_0" range="0 110"/>
+          <geom name="h61_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h61_prox_1" pos="0.05 0 0">
+        <joint name="h61_mcp_1" range="-10 90"/>
+        <geom name="h61_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h61_dist_1" pos="0.05 0 0">
+          <joint name="h61_pip_1" range="0 110"/>
+          <geom name="h61_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h61_prox_2" pos="0.05 -0.030 0">
+        <joint name="h61_mcp_2" range="-10 90"/>
+        <geom name="h61_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h61_dist_2" pos="0.05 0 0">
+          <joint name="h61_pip_2" range="0 110"/>
+          <geom name="h61_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h62_palm" pos="0.750 1.050 0.15">
+      <geom name="h62_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h62_prox_0" pos="0.05 0.030 0">
+        <joint name="h62_mcp_0" range="-10 90"/>
+        <geom name="h62_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h62_dist_0" pos="0.05 0 0">
+          <joint name="h62_pip_0" range="0 110"/>
+          <geom name="h62_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h62_prox_1" pos="0.05 0 0">
+        <joint name="h62_mcp_1" range="-10 90"/>
+        <geom name="h62_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h62_dist_1" pos="0.05 0 0">
+          <joint name="h62_pip_1" range="0 110"/>
+          <geom name="h62_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h62_prox_2" pos="0.05 -0.030 0">
+        <joint name="h62_mcp_2" range="-10 90"/>
+        <geom name="h62_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h62_dist_2" pos="0.05 0 0">
+          <joint name="h62_pip_2" range="0 110"/>
+          <geom name="h62_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+    <body name="h63_palm" pos="1.050 1.050 0.15">
+      <geom name="h63_palm_g" type="box" size="0.05 0.05 0.012" rgba="0.4 0.4 0.45 1" mass="0.12"/>
+      <body name="h63_prox_0" pos="0.05 0.030 0">
+        <joint name="h63_mcp_0" range="-10 90"/>
+        <geom name="h63_prox_0_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h63_dist_0" pos="0.05 0 0">
+          <joint name="h63_pip_0" range="0 110"/>
+          <geom name="h63_dist_0_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h63_prox_1" pos="0.05 0 0">
+        <joint name="h63_mcp_1" range="-10 90"/>
+        <geom name="h63_prox_1_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h63_dist_1" pos="0.05 0 0">
+          <joint name="h63_pip_1" range="0 110"/>
+          <geom name="h63_dist_1_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+      <body name="h63_prox_2" pos="0.05 -0.030 0">
+        <joint name="h63_mcp_2" range="-10 90"/>
+        <geom name="h63_prox_2_g" fromto="0 0 0 0.05 0 0" size="0.008" mass="0.04"/>
+        <body name="h63_dist_2" pos="0.05 0 0">
+          <joint name="h63_pip_2" range="0 110"/>
+          <geom name="h63_dist_2_g" fromto="0 0 0 0.035 0 0" size="0.007" mass="0.04"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
