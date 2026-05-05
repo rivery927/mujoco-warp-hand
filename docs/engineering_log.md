@@ -40,3 +40,23 @@ Each entry is potential material for the final presentation.
   runtime is unit-agnostic and treats all signals in radians.
 
 Mon May  4 09:27:23 PM EDT 2026 - Project functionally complete. Email requirements 6/7 (#7 = in-person).
+
+## D2 verification — kinematic connectivity check
+
+After visual inspection raised doubt about whether the three fingers
+were truly children of the palm body or just visually overlapping
+floating bodies, ran two diagnostic checks:
+
+1. body_parentid array confirmed:
+   - palm.parent = world
+   - proximal_{0,1,2}.parent = palm
+   - distal_{i}.parent = proximal_{i}
+
+2. Moved palm.body_pos from (0,0,0.15) to (0.5,0,0.5) and re-ran
+   forward kinematics. All three fingertip positions translated by
+   exactly (+0.5, 0, +0.35), matching the palm displacement to
+   floating-point precision.
+
+Conclusion: The hand is one rigid kinematic tree, not three independent
+floating fingers. Visual gap at palm-finger interface is a rendering
+artifact, not a structural disconnect.
